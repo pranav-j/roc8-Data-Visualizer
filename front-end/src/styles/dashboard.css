@@ -1,0 +1,21 @@
+/* .dashboard {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.dashboard p{
+    justify-content: center;
+    text-align: center;
+}
+
+.dashboard-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
