@@ -71,7 +71,7 @@ const HorizontalBarChart = () => {
     };
 
     const chartOptions = {
-        indexAxis: 'y', // This makes the bar chart horizontal
+        indexAxis: 'y',
         responsive: true,
         plugins: {
             legend: {
@@ -89,7 +89,7 @@ const HorizontalBarChart = () => {
                 const clickedIndex = elements[0].index;
                 const yValue = chartData.labels[clickedIndex];
                 dispatch(setSelectedYValue(yValue));
-                setSelectedIndex(clickedIndex); // Set the selected index
+                setSelectedIndex(clickedIndex);
             }
         },
     };

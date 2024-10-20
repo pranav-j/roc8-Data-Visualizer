@@ -7,7 +7,7 @@ export const getSheetData = async (req, res) => {
     console.log({ age, gender, startDate, endDate });
 
     const convertDateFormat = (dateString) => {
-        const parts = dateString.split('/'); // Split by '/'
+        const parts = dateString.split('/');
         // Adjust to 'YYYY-MM-DD' format
         return `${parts[2]}-${parts[1].padStart(2, '0')}-${parts[0].padStart(2, '0')}`;
     };
@@ -33,19 +33,14 @@ export const getSheetData = async (req, res) => {
             F: Number(row.F),
         }));
 
-        // Convert startDate and endDate to Date objects
         const start = new Date(startDate);
         const end = new Date(endDate);
         
         const filteredData = dataArray.filter(item => {
             // Convert Day to the 'YYYY-MM-DD' format for comparison
             const itemDateString = convertDateFormat(item.Day);
-            const itemDate = new Date(itemDateString); // Now this should be correctly parsed
+            const itemDate = new Date(itemDateString);
             
-            // console.log({ start, end }); 
-            // console.log({ dayyyyyyy: item.Day });
-            // console.log({ itemDate });
-
             return (
                 item.Age === age &&
                 item.Gender === gender &&

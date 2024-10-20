@@ -14,11 +14,10 @@ import {
 } from 'chart.js';
 import zoomPlugin from 'chartjs-plugin-zoom';
 
-// Registering chart.js components and plugins
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Title, Tooltip, Legend, zoomPlugin);
 
 function LineGraph() {
-    const chartRef = useRef(null); // Reference to the chart instance
+    const chartRef = useRef(null);
     const data = useSelector((state) => state.dataReducer.data);
     const selectedYValue = useSelector((state) => state.dataReducer.selectedYValue);
 
@@ -60,14 +59,14 @@ function LineGraph() {
             zoom: {
                 pan: {
                     enabled: true,
-                    mode: 'x', // Allow panning on the x-axis only
+                    mode: 'x',
                 },
                 zoom: {
                     enabled: true,
-                    mode: 'x', // Allow zooming on the x-axis only
+                    mode: 'x',
                     wheel: {
-                        enabled: true, // Enable zooming with the scroll wheel
-                        speed: 0.1, // Set the zoom speed for the scroll wheel
+                        enabled: true,
+                        speed: 0.1,
                     },
                 },
             },
@@ -90,7 +89,6 @@ function LineGraph() {
         },
     };
 
-    // Function to reset the zoom
     const handleResetZoom = () => {
         if (chartRef.current) {
             chartRef.current.resetZoom();

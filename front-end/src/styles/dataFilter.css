@@ -3,7 +3,6 @@
     padding: 20px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    /* max-width: 400px; */
     margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -28,10 +27,7 @@
 
 .data-filter select,
 .data-filter input[type="date"] {
-    /* width: 100%; */
     padding: 8px;
-    /* margin-top: 5px; */
-    /* margin-bottom: 10px; */
     margin-left: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -59,29 +55,22 @@
     .inputs {
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Centers horizontally */
+        justify-content: center;
         align-items: center;
         gap: 20px;
     }
 
     .data-filter select,
     .data-filter input[type="date"] {
-        /* width: 100%; */
+
         padding: 8px;
-        /* margin-top: 5px; */
-        /* margin-bottom: 10px; */
-        /* margin-left: 8px; */
+
         border: 1px solid #ccc;
         border-radius: 4px;
         background-color: #fff;
         font-size: 14px;
     }
 
-    /* .data-filter label,
-    .data-filter select,
-    .data-filter input[type="date"] {
-        width: 100%;
-    } */
 }
 
 .button-group {
@@ -91,7 +80,7 @@
 }
 
 .clear-button {
-    background-color: #f44336; /* Red color for clear button */
+    background-color: #f44336;
     color: white;
     font-size: 16px;
     border: none;
