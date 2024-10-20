@@ -5,7 +5,7 @@ import { setCookie, clearCookie, getCookie } from '../../utils/cookieHelper';
 export const fetchFilteredData = createAsyncThunk(
     'data/fetchFilteredData',
     async ({ age, gender, startDate, endDate }) => {
-        const response = await axios.get(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/data`, {
+        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/data`, {
             params: { age, gender, startDate, endDate },
             withCredentials: true,
         });

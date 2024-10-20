@@ -15,7 +15,7 @@ function Signup() {
         event.preventDefault();
 
         try {
-            const response = await axios.post(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/signup`, {
+            const response = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/signup`, {
                 username,
                 email,
                 password,
